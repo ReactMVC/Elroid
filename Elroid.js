@@ -3,6 +3,7 @@ class Elroid {
   constructor(options) {
     this.el = options.el;
     this.data = options.data;
+    this.template = document.querySelector(options.el).innerHTML;
 
     this.compile();
     this.bindEvents();
@@ -47,7 +48,8 @@ class Elroid {
   update(data) {
     Object.assign(this.data, data);
     const compiledTemplate = this.compileTemplate(this.template);
-    this.el.innerHTML = compiledTemplate;
+    const el = document.querySelector(this.el);
+    el.innerHTML = compiledTemplate;
     this.bindEvents();
   }
 }
