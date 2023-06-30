@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Elroid Example</title>
+  <script src="Elroid.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{title}}</h1>
+    <button el-click="ShowAlert">Click me</button>
+  </div>
+
+  <script>
+    const app = new Elroid({
+      el: '#app',
+      data: {
+        name: 'Hossein',
+        title: 'Welcome to Elroid Library',
+        methods: {
+          ShowAlert() {
+            alert('Button clicked!');
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

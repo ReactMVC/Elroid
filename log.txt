@@ -1,0 +1,4 @@
+Added editing functionality
+Add clickability and functions for the component
+Added HTTP request feature
+Another bug fix...

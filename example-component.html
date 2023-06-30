@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Elroid Example</title>
+  <script src="Elroid.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    const component = new ElComponent({
+      template: `
+          <h2>{{title}}</h2>
+          <p>Users, {{name.1}} and {{name.2}}!</p>
+          <p>Admin is, Name: {{name.3.name}} and Email {{name.3.email}}!</p>
+          <button el-click="Edit">Edit Tilte</button>
+      `,
+      data: {
+        name: {
+          1: "Hossein",
+          2: "Ali",
+          3: {
+            name: "Reza",
+            email: "h3dev.pira@gmail.com"
+          }
+        },
+        title: 'Custom Component',
+        methods: {
+          Edit() {
+            this.title = "Home";
+          }
+        }
+      },
+    });
+
+    document.getElementById('app').appendChild(component.el);
+  </script>
+</body>
+
+</html>

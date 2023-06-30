@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elroid</title>
+</head>
+
+<body>
+
+    <script src="Elroid.js"></script>
+
+    <script>
+        const http = new ElRequest();
+
+        const url = "http://localhost:8000/api.php";
+
+
+        http.post(url, {}, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(res);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
