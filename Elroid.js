@@ -43,14 +43,21 @@ class Elroid {
       }
     });
   }
+
+  update(data) {
+    Object.assign(this.data, data);
+    const compiledTemplate = this.compileTemplate(this.template);
+    this.el.innerHTML = compiledTemplate;
+    this.bindEvents();
+  }
 }
 
-// Component
+// Elroid Component
 class ElComponent {
   constructor(options) {
     this.template = options.template;
     this.data = options.data;
-    this.el = document.createElement('div');
+    this.el = document.querySelector(options.el);
 
     this.compile();
     this.bindEvents();
@@ -77,14 +84,20 @@ class ElComponent {
       if (method && typeof method === 'function') {
         element.addEventListener('click', () => {
           method.bind(this.data)();
-          this.compile();
-          this.bindEvents();
         });
       }
     });
   }
+
+  update(data) {
+    Object.assign(this.data, data);
+    const compiledTemplate = this.compileTemplate(this.template);
+    this.el.innerHTML = compiledTemplate;
+    this.bindEvents();
+  }
 }
 
+// Elroid Request
 class ElRequest {
   constructor() {
     this.http = new XMLHttpRequest();
