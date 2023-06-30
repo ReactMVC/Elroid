@@ -30,12 +30,11 @@
         title: 'Custom Component',
         methods: {
           Edit() {
-            this.title = "Home";
+            component.update({ title: "Home" });
           }
         }
       },
     });
-    document.getElementById('app').appendChild(component.el);
   </script>
 </body>
 
