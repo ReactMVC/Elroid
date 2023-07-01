@@ -11,7 +11,7 @@
     <div id="app">
         <h1>{{title}}</h1>
         <button el-click="Edit">Edit Tilte</button>
-        <button el-click="Defult">Defult</button>
+        <button el-click="Default">Default</button>
     </div>
 
     <script>
@@ -23,7 +23,7 @@
                     Edit() {
                         app.update({ title: "Home" });
                     },
-                    Defult() {
+                    Default() {
                         app.update({ title: 'Welcome to Elroid Library' });
                     }
                 }
