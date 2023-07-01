@@ -4,14 +4,14 @@ If you build a router with Elroid, add these so that when https://copy.reactmvc.
 
 For Apache
 ```
-RewriteEngine On 
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.html [L,QSA] 
+RewriteRule ^(.*)$ index.html [L,QSA]
 ```
 For Nginx
 ```
- location / { 
- try_files $uri $uri/ /index.html; 
- }  
+location / {
+    try_files $uri $uri/ /index.html;
+}
  ```
 Apache in the .htaccess file and Nginx in the nginx.conf file 
