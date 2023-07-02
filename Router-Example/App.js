@@ -8,8 +8,7 @@ class HomeComponent extends ElComponent {
           <p>Click the links in the navigation bar to go to other pages.</p>
         </div>
       `,
-      data: {},
-      route: '/',
+      data: {}
     });
   }
 }
@@ -24,8 +23,7 @@ class AboutComponent extends ElComponent {
           <p>We are a company that specializes in creating web applications.</p>
         </div>
       `,
-      data: {},
-      route: '/about',
+      data: {}
     });
   }
 }
@@ -40,14 +38,12 @@ class NotFoundComponent extends ElComponent {
           <p>The page you are looking for could not be found.</p>
         </div>
       `,
-      data: {},
-      route: '/404',
+      data: {}
     });
   }
 }
 
 const router = new ElRouter({
-  el: '#app',
   routes: [
     { route: '/', component: HomeComponent },
     { route: '/about', component: AboutComponent },
