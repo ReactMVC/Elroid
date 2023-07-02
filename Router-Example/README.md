@@ -1,4 +1,4 @@
-# Router Important note. 
+# Important note. 
 If you build a router with Elroid, add these so that when https://copy.reactmvc.ir/about is refreshed, you will not get a 404 error.
 <br>
 
